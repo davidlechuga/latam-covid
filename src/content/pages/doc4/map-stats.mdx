@@ -1,0 +1,94 @@
+---
+id: "map-stats"
+title: "Map & Stats"
+author: kmk
+tags: [vim-labs]
+---
+
+import Card from '@material-ui/core/Card'
+import CardActionArea from '@material-ui/core/CardActionArea'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
+
+
+
+
+<Grid container>
+	<Grid item xs={4}>
+		<Card style={{maxWidth: 345}}>
+			<CardMedia
+				style={{height: 140}}
+				image={}
+				component="img"
+				title="JHU Map"
+			/>
+			<CardContent>
+				<Typography gutterBottom variant="h6" component="h2">
+				JHU Map
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p" style={{minHeight: 70}}>
+				COVID-19 Global Cases by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)
+				</Typography>
+			</CardContent>
+			<CardActions>
+			<Button size="small" color="primary" href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
+				Go to Website
+			</Button>
+			</CardActions>
+		</Card>
+	</Grid>
+	<Grid item xs={4}>
+		<Card style={{maxWidth: 345}}>
+			<CardMedia
+				style={{height: 140}}
+				image="/static/images/cards/contemplative-reptile.jpg"
+				title="Contemplative Reptile"
+			/>
+			<CardContent>
+				<Typography gutterBottom variant="h6" component="h2">
+				WHO Map
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p" style={{minHeight: 70}}>
+				Coronavirus disease (COVID-19) Situation Dashboard
+				</Typography>
+			</CardContent>
+			<CardActions>
+			<Button size="small" color="primary" href="https://experience.arcgis.com/experience/685d0ace521648f8a5beeeee1b9125cd">
+				Go to Website
+			</Button>
+			</CardActions>
+		</Card>
+	</Grid>
+	<Grid item xs={4}>
+		<Card style={{maxWidth: 345}}>
+			<CardMedia
+				style={{height: 140}}
+				image="/static/images/cards/contemplative-reptile.jpg"
+				title="Contemplative Reptile"
+			/>
+			<CardContent>
+				<Typography gutterBottom variant="h6" component="h2">
+				NYT Map
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p" style={{minHeight: 70}}>
+				Tracking the Global Outbreak by The New York Times
+				</Typography>
+			</CardContent>
+			<CardActions>
+			<Button size="small" color="primary" href="https://www.nytimes.com/interactive/2020/world/coronavirus-maps.html">
+				Go to Website
+			</Button>
+			</CardActions>
+		</Card>
+	</Grid>	
+</Grid>
+
+
+
+
+
+

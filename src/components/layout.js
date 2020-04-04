@@ -1,51 +1,26 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React, { useState } from "react";
+import { CssBaseline } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/styles";
+import theme from "../style/theme";
+import Appbar from "../components/Appbar";
+import Drawer from "../components/Drawer";
+import Footer from "../components/Footer";
+import "../style/layout.css";
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+export default ({ elevateAppBar = true, children }) => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const handleToggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Appbar
+        onToggleDrawer={handleToggleDrawer}
+        elevation={Number(elevateAppBar)}
+      />
+      {children}
+      <Footer />
+      <Drawer open={isDrawerOpen} onClose={handleToggleDrawer} />
+    </ThemeProvider>
+  );
+};

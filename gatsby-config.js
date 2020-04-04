@@ -1,9 +1,119 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Coronantine`,
+    description: `The one news stop`,
+	author: `@coronantine`,
+	components: {
+		appbar: {
+		  position: "sticky",
+		  links: [
+			{
+			  title: "News",
+			  url: "/news/page/1"
+			},
+			{
+			  title: "Myths & Facts",
+			  url: "/myths-facts"
+			},
+			{
+			  title: "Map & Stats",
+			  url: "/map-stats"
+			},
+			{
+			  title: "Support Us",
+			  url: "/support"
+			}
+		  ]
+		},
+		footer: {
+		  copyright: "https://coronantine.com",
+		  columns: [
+			{
+			  heading: "Column 1",
+			  links: [
+				{
+				  title: "Link 1",
+				  url: "#"
+				},
+				{
+				  title: "Link 2",
+				  url: "#"
+				},
+				{
+				  title: "Link 3",
+				  url: "#"
+				}
+			  ]
+			},
+			{
+			  heading: "Column 2",
+			  links: [
+				{
+				  title: "Link A",
+				  url: "#"
+				},
+				{
+				  title: "Link B",
+				  url: "#"
+				},
+				{
+				  title: "Link C",
+				  url: "#"
+				}
+			  ]
+			},
+			{
+			  heading: "Column 3",
+			  links: [
+				{
+				  title: "Link x",
+				  url: "#"
+				},
+				{
+				  title: "Link y",
+				  url: "#"
+				},
+				{
+				  title: "Link z",
+				  url: "#"
+				}
+			  ]
+			}
+		  ]
+		}
+	  },
+	  templates: {
+		home: {
+		  totalPosts: 3,
+		  template: "home"
+		},
+		pages: {
+		  path: "/content/pages/",
+		  template: "page-noimage"
+		},
+		posts: {
+		  path: "/content/posts/",
+		  pathPrefix: "news",
+		  template: "post",
+		  filters: {
+			tag: {
+			  pathPrefix: "tag",
+			  template: "tag",
+			  totalPosts: 3,
+			  pagination: {
+				template: "resultsTag",
+				resultsPerPage: 6
+			  }
+			}
+		  },
+		  pagination: {
+			template: "resultsAll",
+			resultsPerPage: 6
+		  }
+		}
+	  }
   },
+  
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -12,7 +122,8 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },
+	},
+	`gatsby-plugin-material-ui`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -24,11 +135,45 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
+	},
+	`gatsby-plugin-material-ui`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`]
+      }
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+		resolve: `gatsby-source-filesystem`,
+		options: {
+		  name: `markdown-pages`,
+		  path: `src/content/pages`
+		}
+	  },
+	  {
+		resolve: `gatsby-source-filesystem`,
+		options: {
+		  name: `markdown-posts`,
+		  path: `src/content/posts`
+		}
+	  },
+	  {
+		resolve: "gatsby-plugin-prefetch-google-fonts",
+		options: {
+		  fonts: [
+			{
+			  family: "Roboto"
+			},
+			{
+			  family: "Work Sans",
+			  variants: ["800"]
+			}
+		  ]
+		}
+	  }
   ],
 }
