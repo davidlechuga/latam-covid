@@ -22,6 +22,10 @@ module.exports = {
 			{
 			  title: "Support Us",
 			  url: "/support"
+			},
+			{
+			  title: "About Us",
+			  url: "/about-us"
 			}
 		  ]
 		},
