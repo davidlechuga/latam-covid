@@ -26,6 +26,10 @@ module.exports = {
 			{
 			  title: "About Us",
 			  url: "/about-us"
+			},
+			{
+				title:"FAQ",
+				url: "/faq"
 			}
 		  ]
 		},
