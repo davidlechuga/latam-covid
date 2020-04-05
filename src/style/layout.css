@@ -1,17 +1,41 @@
 html {
-  min-height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
+	min-height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 html,
 body,
 #___gatsby,
 #gatsby-focus-wrapper {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 body,
 #___gatsby,
 #gatsby-focus-wrapper {
-  flex-grow: 1;
+	flex-grow: 1;
+}
+
+.goog-te-gadget {
+	font-size: 6px !important;
+}
+
+#coffe:hover {
+	letter-spacing: 0.8em;
+	background-color: #f08c99;
+}
+
+#coffe {
+	color: white;
+}
+button {
+	height: 5em;
+	padding: 26px;
+	margin: 7px;
+	background-color: #feb1c0;
+	border: none;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	transition: all 0.2s cubic-bezier(.4, 0, .2, 1);
 }
