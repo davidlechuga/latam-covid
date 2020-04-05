@@ -22,6 +22,10 @@ module.exports = {
 			{
 			  title: "Support Us",
 			  url: "/support"
+			},
+			{
+			  title: "About Us",
+			  url: "/about-us"
 			}
 		  ]
 		},
@@ -138,9 +142,6 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
 	},
-	`gatsby-plugin-material-ui`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

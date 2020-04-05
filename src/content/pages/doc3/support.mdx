@@ -1,13 +1,104 @@
 ---
 id: "support"
 title: "Support Us"
-author: kmk
-featuredImage: featured.jpg
+author: coronantine
 tags: [vim-labs]
 ---
+import Card from '@material-ui/core/Card'
+import CardActionArea from '@material-ui/core/CardActionArea'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
 
-import { Button } from '@material-ui/core'
+We are giving our best effort to contribute against the on-going corona virus pandemic.If you like our work, support us by making a donation to our PayPal account or to our cryptocurrency wallets
 
+<Button variant="contained" color="primary" href="https://paypal.me/coronantine">
+  Go to Paypal
+</Button>
 
-
-<Button color='secondary' variant='contained'>Fantastic!</Button>
+<Grid container>
+	<Grid item xs={12} md={4}>
+		<Card>			
+			<CardContent>
+				<img src="/qr/bitcoin.png" width="144px" height="141px"/>
+				<Typography gutterBottom variant="h6" component="h2">
+				Bitcoin
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p" style={{minHeight: 70}}>
+				Address: 1EgLJ5xjdrqWk55vn8GS4mavBwVMWETxKq
+				</Typography>
+			</CardContent>
+		</Card>
+	</Grid>
+	<Grid item xs={12} md={4}>
+		
+		<Card>
+			<CardContent>
+				<img src="/qr/ethereum.png" width="144px" height="141px"/>
+				<Typography gutterBottom variant="h6" component="h2">
+				Ethereum
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p" style={{minHeight: 70}}>
+				Address: 0x41d6896Bb966006F719A6d9116b50Ca690d69103
+				</Typography>
+			</CardContent>
+		</Card>
+	</Grid>
+	<Grid item xs={12} md={4}>
+		<Card>
+			<CardContent>
+				<img src="/qr/ripple.png" width="144px" height="141px"/>
+				<Typography gutterBottom variant="h6" component="h2">
+				Ripple
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p" style={{minHeight: 70}}>
+				Address: r9o7zP9geaMcQsyjquzQVR7yy1G64YQfwD
+				</Typography>
+			</CardContent>
+		</Card>
+	</Grid>
+</Grid>
+<Grid container>
+	<Grid item xs={12} md={4}>
+		<Card>
+			<CardContent>
+				<img src="/qr/bitcoin-cash.png" width="144px" height="141px"/>
+				<Typography gutterBottom variant="h6" component="h2">
+				Bitcoin Cash
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p" style={{minHeight: 70}}>
+				Address: qz0dr2c24n30emlzt9h7hu3gkxayl5n08uhy48x7un
+				</Typography>
+			</CardContent>
+		</Card>
+	</Grid>
+	<Grid item xs={12} md={4}>
+		<Card>
+			<CardContent>
+				<img src="/qr/bitcoin-sv.png" width="144px" height="141px"/>
+				<Typography gutterBottom variant="h6" component="h2">
+				Bitcoin SV
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p" style={{minHeight: 70}}>
+				Address: qz0dr2c24n30emlzt9h7hu3gkxayl5n08uhy48x7un
+				</Typography>
+			</CardContent>
+		</Card>
+	</Grid>
+	<Grid xs={12} md={4}>
+		<Card>
+			<CardContent>
+				<img src="/qr/monero.png" width="144px" height="141px"/>
+				<Typography gutterBottom variant="h6" component="h2">
+				Monero
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p" style={{minHeight: 70}}>
+				Address: 443jJQ5dMJhbWitXE81xzXQJPdmwsrzk421DvnrDw61jL4WnuF9PDcT6E3CWnA9RZYXxyh8NHirDa5tYKRfnRGqUQyUpGB9
+				</Typography>
+			</CardContent>
+		</Card>
+	</Grid>
+</Grid>
