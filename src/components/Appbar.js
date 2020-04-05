@@ -80,7 +80,7 @@ export default ({ elevation = 1, onToggleDrawer }) => {
 								{title}
 							</ButtonBase>
 
-							<ButtonBase>
+							{/* <ButtonBase>
 								<button id="coffe">
 									<a
 										style={{
@@ -96,7 +96,7 @@ export default ({ elevation = 1, onToggleDrawer }) => {
 										Take a coffe with us ! ❤️{' '}
 									</a>
 								</button>
-							</ButtonBase>
+							</ButtonBase> */}
 
 							<ButtonBase
 								style={{
