@@ -28,9 +28,14 @@ module.exports = {
 			  url: "/about-us"
 			},
 			{
+				title:"Best Practices",
+				url: "/best-practices"
+			},
+			{
 				title:"FAQ",
 				url: "/faq"
 			}
+			
 		  ]
 		},
 		footer: {
