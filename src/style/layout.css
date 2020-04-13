@@ -28,14 +28,3 @@ body,
 #coffe {
 	color: white;
 }
-button {
-	height: 5em;
-	padding: 26px;
-	margin: 7px;
-	background-color: #feb1c0;
-	border: none;
-	border-radius: 3px;
-	text-transform: uppercase;
-	letter-spacing: 0.5em;
-	transition: all 0.2s cubic-bezier(.4, 0, .2, 1);
-}
